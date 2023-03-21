@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+      "*.js": "javascriptreact",
+      "*.ts": "typescriptreact"
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "prettier.semi": false,
+    "prettier.printWidth": 9999,
+    "editor.tabSize": 2,
+    "prettier.arrowParens": "avoid",
+    "prettier.trailingComma": "none"
+  }
