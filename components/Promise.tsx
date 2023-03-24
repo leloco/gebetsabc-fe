@@ -9,6 +9,8 @@ type Props = {
   content: string
   reference: string
   font?: string
+  bc?: string
+  tc?: string
 }
 
 function Promise(props: Props) {
@@ -18,7 +20,7 @@ function Promise(props: Props) {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(prevState => false)
-    }, 10000)
+    }, 1600)
   }, [])
 
   function clickHandler() {
@@ -26,9 +28,13 @@ function Promise(props: Props) {
   }
   return (
     <div className="flex flex-col gap-2">
-      <div className="flex justify-center items-center p-8 rounded-md border-decent-gray/70 border hover:shadow-hovered transition-all duration-300 ease-in-out w-full min-h-[300px]">
+      <div style={{ backgroundColor: props.bc }} className={`flex justify-center items-center p-8 rounded-md border-decent-gray/70 border hover:shadow-hovered transition-all duration-300 ease-in-out w-full min-h-[300px]`}>
         {isLoading && <LoadingContent />}
-        {!isLoading && <h2 className={`${props.font ? props.font : ""} animate-fade-in text-lg md:text-xl lg:text-2xl font-bold`}>{props.content}</h2>}
+        {!isLoading && (
+          <h2 style={{ color: props.tc }} className={`${props.font ? props.font : ""} animate-fade-in text-lg md:text-xl lg:text-2xl font-bold`}>
+            {props.content}
+          </h2>
+        )}
       </div>
       <div className="flex justify-between items-center">
         {isLoading && <LoadingBar width="w-[50px]" />}

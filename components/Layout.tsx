@@ -6,7 +6,7 @@ type Props = {
   title: string
   keywords: string
   description: string
-  children: string | JSX.Element | JSX.Element[] | (() => JSX.Element)
+  children: React.ReactNode
 }
 
 function Layout(props: Props) {
@@ -18,6 +18,7 @@ function Layout(props: Props) {
           <meta name="description" content={props.description} />
           <meta name="keywords" content={props.keywords} />
         </Head>
+        <Header />
         {props.children}
       </>
     </div>
