@@ -2,8 +2,6 @@ import { useRouter } from "next/router"
 import Link from "next/link"
 import PropTypes from "prop-types"
 
-export { NavLink }
-
 type props = {
   href: string
   exact: boolean
@@ -30,3 +28,5 @@ function NavLink(props: props) {
     </>
   )
 }
+
+export default NavLink

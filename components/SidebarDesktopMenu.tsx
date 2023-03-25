@@ -7,7 +7,7 @@ import RandomOff from "../public/random-off.svg"
 import RandomOn from "../public/random-on.svg"
 import BookOff from "../public/book-off.svg"
 import BookOn from "../public/book-on.svg"
-import { NavLink } from "./NavLink"
+import NavLink from "./NavLink"
 import { useRouter } from "next/router"
 type Props = {}
 

@@ -20,7 +20,7 @@ function Promise(props: Props) {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(prevState => false)
-    }, 1600)
+    }, 3600)
   }, [])
 
   function clickHandler() {
